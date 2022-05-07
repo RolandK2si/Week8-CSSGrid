@@ -1,0 +1,114 @@
+:root {
+    --my-padding: 0.4rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    color: white;
+    display: grid;
+    grid-template-columns: 0.5fr 0.8fr 1fr;
+    grid-template-rows: 0.4fr 1.3fr 0.7fr 0.9fr 0.6fr;
+    grid-template-areas:
+    "header menuu menuu"
+    "hero hero hero"
+    "main main image"
+    "main main extra"
+    "banner banner banner"
+    ;
+    height: 100vh;
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.header {
+    align-items: center;
+    display: grid;
+    background-color: brown;
+    grid-area: header;
+    padding: var(--my-padding);
+}
+
+.menuu {
+    align-items: center;
+    display: grid;
+    background-color: rgb(126, 113, 2);
+    grid-area: menuu;
+    padding: var(--my-padding);
+}
+
+.hero {
+    align-items: center;
+    display: grid;
+    background-color: rgb(0, 17, 255);
+    grid-area: hero;
+    padding: var(--my-padding);
+}
+
+main {
+    align-items: center;
+    display: grid;
+    background-color: rgb(126, 2, 2);
+    grid-area: main;
+    padding: var(--my-padding);
+}
+
+.image {
+    align-items: center;
+    display: grid;
+    background-color: rgb(126, 2, 109);
+    grid-area: image;
+    padding: var(--my-padding);
+}
+
+.extra {
+    align-items: center;
+    display: grid;
+    background-color: rgb(2, 126, 116);
+    grid-area: extra;
+    padding: var(--my-padding);
+}
+
+footer {
+    align-items: center;
+    display: grid;
+    background-color: rgb(6, 126, 2);
+    grid-area: banner;
+    padding: var(--my-padding);
+}
+
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 0.5fr 1fr 0.5fr;
+        grid-template-rows: 0.4fr 1fr 1.5fr 0.8fr 0.6fr;
+        grid-template-areas:
+        "header header header"
+        "hero hero hero"
+        "menuu main main"
+        "menuu banner banner"
+        "menuu extra image"        
+        ;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.7fr 0.7fr 1.2fr 1.5fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "header"
+        "menuu"
+        "hero"
+        "main"
+        "banner"
+        "extra"
+        "image"
+        ;
+    }
+
+}
